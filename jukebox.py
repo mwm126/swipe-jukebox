@@ -24,7 +24,7 @@ while True:
     if not tracks:
         print("Could not parse card: ", swipe)
         continue
-    SWIPE_NUM = "".join([char for char in track[0] if char.isdigit()])
+    SWIPE_NUM = "".join([char for char in tracks[0] if char.isdigit()])
 
     if not SWIPE_NUM:
         print("no swipe_num")
