@@ -20,7 +20,11 @@ print("Jukebox started!")
 
 while True:
     swipe = input("Swipe: ")
-    SWIPE_NUM = "".join([char for char in swipe if char.isdigit()])
+    tracks = swipe.split("?")
+    if not tracks:
+        print("Could not parse card: ", swipe)
+        continue
+    SWIPE_NUM = "".join([char for char in track[0] if char.isdigit()])
 
     if not SWIPE_NUM:
         print("no swipe_num")
