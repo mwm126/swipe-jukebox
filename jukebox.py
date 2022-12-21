@@ -28,7 +28,7 @@ while True:
 
     if SWIPE_NUM == "999":
         print("toggle")
-        run(["spt", "playback", "--toggle", "--device", DEVICE], check=False)
+        # run(["spt", "playback", "--toggle", "--device", DEVICE], check=False)
         continue
 
     with open(SONGS_TXT, encoding="utf8") as songs:
@@ -36,12 +36,13 @@ while True:
             fields = line.split()
             if len(fields) < 2:
                 continue
-            song_num, uri, *_ = fields
+            song_num, uri, *rest = fields
+            desc = " ".join(rest)
             if song_num == SWIPE_NUM:
-                print("Playing: song #", SWIPE_NUM)
+                print("Playing: song #", SWIPE_NUM, " ", desc)
                 break
         else:
             print("Not found: song #", SWIPE_NUM)
             continue
 
-    run(["spt", "play", "--device", DEVICE, "--uri", uri], check=False)
+    # run(["spt", "play", "--device", DEVICE, "--uri", uri], check=False)
