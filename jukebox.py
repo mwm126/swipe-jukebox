@@ -2,13 +2,15 @@
 
 """ Python script to run Spotify Jukebox with spotify-tui """
 
+from pathlib import Path
 from subprocess import run
 
-DEVICE = "CRATER"
+DEVICE = "raspotify"
 SONG_URL = "https://raw.githubusercontent.com/mwm126/swipe-jukebox/master/songs.txt"
+SONGS_TXT = Path(__file__).parent / "songs.txt"
 
 print("Updating song list...")
-song_list = run(["curl", "-s", "-S", SONG_URL, "-o", "songs.txt"], check=False)
+song_list = run(["curl", "-s", "-S", SONG_URL, "-o", SONGS_TXT.as_posix()], check=False)
 if song_list.returncode:
     print("Could not update songlist.")
 else:
@@ -29,7 +31,7 @@ while True:
         run(["spt", "playback", "--toggle", "--device", DEVICE], check=False)
         continue
 
-    with open("songs.txt", encoding="utf8") as songs:
+    with open(SONGS_TXT, encoding="utf8") as songs:
         for line in songs:
             fields = line.split()
             if len(fields) < 2:

@@ -96,3 +96,5 @@
 096   spotify:track:3QiAAp20rPC3dcAtKtMaqQ   Blue Christmas (Elvis Presley)
 097   spotify:track:1H5IfYyIIAlgDX8zguUzns   Suspicious Minds (Elvis Presley)
 098   spotify:track:6QPhpvO1pWDS91EsEmzsbc   With Or Without You (U2)
+099   spotify:track:7Jh1bpe76CNTCgdgAdBw4Z   Heroes - 2017 Remaster (David Bowie)
+100   spotify:track:5lwQGZYF4BXOzFtXc5zk8q   Head Over Heels - Dave Bascombe 7" N.Mix (Tears for Fears)
