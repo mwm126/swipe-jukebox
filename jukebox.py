@@ -32,7 +32,7 @@ while True:
 
     if SWIPE_NUM == "999":
         print("toggle")
-        # run(["spt", "playback", "--toggle", "--device", DEVICE], check=False)
+        run(["spt", "playback", "--toggle", "--device", DEVICE], check=False)
         continue
 
     with open(SONGS_TXT, encoding="utf8") as songs:
@@ -49,4 +49,4 @@ while True:
             print("Not found: song #", SWIPE_NUM)
             continue
 
-    # run(["spt", "play", "--device", DEVICE, "--uri", uri], check=False)
+    run(["spt", "play", "--device", DEVICE, "--uri", uri], check=False)
