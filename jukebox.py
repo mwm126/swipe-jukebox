@@ -5,7 +5,7 @@
 from pathlib import Path
 from subprocess import run
 
-DEVICE = "Librespot"
+DEVICE = "jukebox"
 SONG_URL = "https://raw.githubusercontent.com/mwm126/swipe-jukebox/master/songs.txt"
 SONGS_TXT = Path(__file__).parent / "songs.txt"
 
